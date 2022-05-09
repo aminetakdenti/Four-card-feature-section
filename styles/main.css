@@ -1,0 +1,123 @@
+/* Start Globale Variables */
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  /* ## Neutral */
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+/* End Globale Variables */
+
+/* Start Globe Rules */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--grayish-blue);
+  background-color: var(--very-light-gray);
+  padding: 15px;
+}
+/* End Globe Rules */
+
+/* Start Feature  */
+.feature {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .feature {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .feature {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .feature {
+    width: 1170px;
+  }
+}
+.feature .title {
+  margin: 0px auto 50px;
+  text-align: center;
+  max-width: 500px;
+}
+.feature .title h2,
+h3 {
+  color: var(--very-dark-blue);
+}
+.feature .title h2:first-child {
+  font-weight: 200;
+  color: var(--very-dark-blue);
+}
+.feature .title p {
+  font-weight: 400;
+}
+
+/* Start Cards */
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+@media (max-width: 991px) {
+  .main {
+    margin: auto;
+    grid-template-columns: repeat(1, auto);
+  }
+}
+.main .card {
+  text-align: right;
+  background-color: #fff;
+  border-radius: 5px;
+  border-top: 4px solid;
+  padding: 10px 20px;
+}
+.main .card h3 {
+  font-weight: 600;
+  text-align: left;
+}
+.main .card p {
+  text-align: left;
+  margin: 10px 0 40px;
+}
+.main .join {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.card1,
+.card4 {
+  align-self: center;
+}
+.main .card.card1 {
+  border-color: var(--cyan);
+}
+.main .card.card2 {
+  border-color: var(--red);
+}
+.main .card.card3 {
+  border-color: var(--orange);
+}
+.main .card.card4 {
+  border-color: var(--blue);
+}
+/* End Cards */
+
+/* End Feature  */
